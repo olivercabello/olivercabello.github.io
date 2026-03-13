@@ -5,7 +5,7 @@ Tu ecosistema de herramientas médicas de confianza, diseñado para profesionale
 ## Nuestras Aplicaciones
 
 * **AmpaCalc:** (Próximamente) Calculadora avanzada para el control de la HTA.
-* **[Añadirás más aquí en el futuro...]**
+* **Mantente informado de próximos lanzamientos**
 
 ---
 *Desarrollado en Canarias por Oliver Cabello.*
