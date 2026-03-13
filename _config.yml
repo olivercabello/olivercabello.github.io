@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 title: Canarias MedCalc
-description: Ecosistema de calculadoras y herramientas médicas.
+description: Ecosistema de calculadoras y herramientas médicas de confianza.
+logo: /Canarias_MedCalc.png
