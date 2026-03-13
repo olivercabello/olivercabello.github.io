@@ -1,4 +1,4 @@
-# Bienvenido a Canarias MedCalc 🇮🇨
+# Bienvenido a Canarias MedCalc 🩺
 
 Tu ecosistema de herramientas médicas de confianza, diseñado para profesionales de la salud.
 
