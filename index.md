@@ -1,4 +1,4 @@
-# Tu salud cardiovascular, bajo control 🇮🇨
+# Tu salud cardiovascular, bajo control 🩺
 
 Bienvenido a **Canarias MedCalc**, el ecosistema de herramientas médicas diseñado en Tenerife para profesionales de la salud y pacientes. Nuestro objetivo es ofrecer calculadoras clínicas precisas, rápidas y seguras.
 
