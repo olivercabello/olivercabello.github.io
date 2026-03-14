@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanariasMedCalc - Herramientas Clínicas</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        .header { background-color: #005EB8; color: white; padding: 3rem 1rem; text-align: center; }
+        .header img { max-width: 180px; height: auto; margin-bottom: 1rem; drop-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header h1 { margin: 0; font-size: 2.5rem; }
+        .header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
+        .card h2 { color: #005EB8; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        
+        .btn { display: inline-block; background: #005EB8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 1rem; text-align: center; }
+        .btn:hover { background: #004a94; color: white; }
+        
+        .features { list-style: none; padding: 0; }
+        .features li { margin-bottom: 0.5rem; }
+        .features li::before { content: "✓ "; color: #005EB8; font-weight: bold; }
+        
+        /* Contenedor para que el formulario de Google quede perfecto */
+        .form-container { width: 100%; height: 600px; margin-top: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; background-color: #fafafa; }
+        .form-container iframe { width: 100%; height: 100%; border: none; }
+
+        /* Estilos del pie de página (Firma) */
+        .footer { text-align: center; padding: 2rem 1rem 3rem; color: #666; font-size: 0.95rem; }
+        .footer a { color: #005EB8; text-decoration: none; font-weight: 600; margin: 0 10px; display: inline-flex; align-items: center; gap: 5px; }
+        .footer a:hover { text-decoration: underline; color: #004a94; }
+        .footer svg { width: 18px; height: 18px; fill: currentColor; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="canarias_medcalc.png" alt="Logo CanariasMedCalc">
+        <h1>CanariasMedCalc</h1>
+        <p>Ecosistema de calculadoras y herramientas clínicas para profesionales sanitarios</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>AmpaCalc - Control Profesional de la HTA</h2>
+            <p>Nuestra primera herramienta, diseñada para analizar y evaluar los registros de Monitorización Ambulatoria de la Presión Arterial (AMPA) de forma rápida, precisa y basada en el protocolo clínico.</p>
+            
+            <ul class="features">
+                <li>Compatible con diagnóstico (7 días) y seguimiento (1 día).</li>
+                <li>Perfiles de riesgo ajustables (General, EVA, RCV Alto).</li>
+                <li>Generación instantánea de promedios e informes.</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">🌐 Versión Web Universal (iOS, Mac, PC)</h3>
+            <p>Utiliza AmpaCalc directamente desde el navegador de tu dispositivo sin necesidad de instalación.</p>
+            <a href="/ampacalc/" class="btn">Abrir AmpaCalc Web</a>
+
+            <h3 style="margin-top: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" style="width: 28px; height: 28px; fill: #3DDC84;">
+                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592c.1052-.1819.043-.4146-.1391-.5195-.1824-.1052-.4146-.0425-.5196.1396l-2.0355 3.5256c-1.4552-.663-3.1118-1.0343-4.8856-1.0343-1.7742 0-3.431.3713-4.8864 1.0343L5.378 5.4822c-.1051-.1821-.3376-.2448-.5196-.1396-.1824.1049-.2444.3376-.1392.5195l1.9971 3.4592C3.1207 11.2828 1 14.5165 1 18.246h22c0-3.7295-2.1208-6.9632-5.7185-8.9246"/>
+                </svg>
+                Programa Beta Tester (Android)
+            </h3>
+            <p>Estamos ultimando los detalles de nuestra app nativa para Android. Si eres profesional sanitario y quieres probarla antes de su lanzamiento oficial, rellena el siguiente formulario para solicitar acceso.</p>
+            <p>Igualmente si tienes alguna duda, sugerencia o quieres reportar un problema; escríbenos:</p>
+            
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefphF4WeP2cx3SL1bc8OEWql1SlBoohLHCmQDzb0aOLK68nA/viewform?embedded=true" width="100%" height="722" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Desarrollado por <strong>Oliver Cabello</strong></p>
+        <div>
+            <a href="https://github.com/olivercabello" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/oliver-cabello-836913341" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
