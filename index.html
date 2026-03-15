@@ -10,6 +10,12 @@
         .header img { max-width: 180px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
         .header h1 { margin: 0; font-size: 2.5rem; }
         .header p { font-size: 1.2rem; opacity: 0.9; }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+        .modal-content { background-color: white; margin: 15% auto; padding: 2rem; border-radius: 8px; max-width: 500px; position: relative; }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: black; }
+        .install-guide h4 { color: #005EB8; margin-top: 1.5rem; margin-bottom: 0.5rem;}
         
         .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
         .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
@@ -51,14 +57,52 @@
             </ul>
 
             <h3 style="margin-top: 2rem;">🌐 Versión Web Universal (iOS, Mac, PC)</h3>
-            <p>Utiliza AmpaCalc directamente desde el navegador de tu dispositivo sin necesidad de instalación.</p>
+            <p>Utiliza AmpaCalc directamente desde el navegador de tu dispositivo.</p>
             <a href="/ampacalc/" class="btn" target="_parent">Abrir AmpaCalc Web</a>
+            <button onclick="document.getElementById('installModal').style.display='block'" class="btn btn-outline" style="margin-left: 0; margin-top: 10px; cursor: pointer;">📲 ¿Quieres instalar AmpaCalc Web en tu móvil?</button>
+
+            <div id="installModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('installModal').style.display='none'">&times;</span>
+                    <h3 style="margin-top: 0; color: #005EB8;">Instalar AmpaCalc</h3>
+                    <p>AmpaCalc es una Aplicación Web Progresiva (PWA). Puedes instalarla en tu dispositivo para usarla como una app nativa sin ocupar apenas espacio:</p>
+                    
+                    <div class="install-guide">
+                        <h4>🍎 En iPhone / iPad (Safari)</h4>
+                        <ol>
+                            <li>Abre AmpaCalc Web en el navegador <strong>Safari</strong>.</li>
+                            <li>Toca el botón <strong>Compartir</strong> (el cuadrado con la flecha hacia arriba, abajo en el centro).</li>
+                            <li>Selecciona <strong>"Añadir a la pantalla de inicio"</strong>.</li>
+                        </ol>
+
+                        <h4>🤖 En Android (Chrome)</h4>
+                        <ol>
+                            <li>Abre AmpaCalc Web en <strong>Google Chrome</strong>.</li>
+                            <li>Toca los <strong>3 puntitos</strong> arriba a la derecha.</li>
+                            <li>Selecciona <strong>"Instalar aplicación"</strong> o "Añadir a la pantalla de inicio".</li>
+                        </ol>
+                        
+                        <h4>💻 En PC / Mac (Chrome / Edge)</h4>
+                        <p>Haz clic en el icono de <strong>"Instalar"</strong> (una pantalla con una flecha) que aparece a la derecha de la barra de direcciones superior.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+            
+                window.onclick = function(event) {
+                    var modal = document.getElementById('installModal');
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
 
             <h3 style="margin-top: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
                 <svg viewBox="0 0 24 24" style="width: 28px; height: 28px; fill: #3DDC84;">
                     <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592c.1052-.1819.043-.4146-.1391-.5195-.1824-.1052-.4146-.0425-.5196.1396l-2.0355 3.5256c-1.4552-.663-3.1118-1.0343-4.8856-1.0343-1.7742 0-3.431.3713-4.8864 1.0343L5.378 5.4822c-.1051-.1821-.3376-.2448-.5196-.1396-.1824.1049-.2444.3376-.1392.5195l1.9971 3.4592C3.1207 11.2828 1 14.5165 1 18.246h22c0-3.7295-2.1208-6.9632-5.7185-8.9246"/>
                 </svg>
-                Programa Beta Tester (Android)
+                ¿Tienes Android? Únete al Programa Beta Tester (Android)
             </h3>
             <p>Estamos ultimando los detalles de nuestra app nativa para Android. <b>Si eres profesional sanitario y quieres probarla antes de su lanzamiento oficial,</b> rellena el siguiente formulario para solicitar acceso.</p>
             <p>Igualmente si tienes alguna duda, sugerencia o quieres reportar un problema; escríbenos:</p>
