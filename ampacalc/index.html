@@ -1,30 +1,5 @@
 <!DOCTYPE html><html><head>
-  <!-- Google Tag Manager -->
-<script>
-  // Capa de datos con configuración de privacidad estricta
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  
-  // 1. Anonimizar IP para cumplir con la LOPD médica
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'granted',
-    'wait_for_update': 500
-  });
-  
-  gtag('config', 'G-6345389668', { 
-    'anonymize_ip': true, 
-    'allow_ad_personalization_signals': false 
-  });
 
-  // 2. Carga estándar de GTM
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-P3VWLPLH');
-</script>
-<!-- End Google Tag Manager -->
   <base href="/ampacalc/">
 
   <meta charset="UTF-8">
@@ -128,14 +103,16 @@
   </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3VWLPLH"
-    height="0" width="0" style="display:none;visibility:hidden">
-    </iframe>
-  </noscript>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ8YNTHGDF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QQ8YNTHGDF');
+</script>
   <script src="flutter_bootstrap.js" async></script>
-<!-- End Google Tag Manager (noscript) -->
   <picture id="splash">
       <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
       <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
