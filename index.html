@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="light" lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ8YNTHGDF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'granted',
-    'wait_for_update': 500
-  });
-  
-  gtag('config', 'G-6345389668', { 
-    'anonymize_ip': true, 
-    'allow_ad_personalization_signals': false 
-  });
-  gtag('js', new Date());
-
-  gtag('config', 'G-QQ8YNTHGDF');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQ8YNTHGDF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('config', 'G-6345389668', { 
+        'anonymize_ip': true, 
+        'allow_ad_personalization_signals': false 
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-QQ8YNTHGDF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CanariasMedCalc - Herramientas Clínicas</title>
@@ -33,129 +30,313 @@
     <meta property="og:image" content="https://canariasmedcalc.com/Canarias_MedCalc.png">
     <meta property="og:url" content="https://canariasmedcalc.com">
     <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#005EB8",
+              "on-surface": "#0b1c30",
+              "on-surface-variant": "#424752",
+              "surface-container-low": "#eff4ff",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#c2c6d4",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+            },
+            fontFamily: {
+              "sans": ["Inter", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; line-height: 1.6; }
-        .header { background-color: #005EB8; color: white; padding: 3rem 1rem; text-align: center; }
-        .header img { max-width: 180px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
-        .header h1 { margin: 0; font-size: 2.5rem; }
-        .header p { font-size: 1.2rem; opacity: 0.9; }
-
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
-        .modal-content { background-color: white; margin: 15% auto; padding: 2rem; border-radius: 8px; max-width: 500px; position: relative; }
-        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .close:hover { color: black; }
-        .install-guide h4 { color: #005EB8; margin-top: 1.5rem; margin-bottom: 0.5rem;}
-        
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 2rem; }
-        .card h2 { color: #005EB8; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        
-        .btn { display: inline-block; background: #005EB8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 1rem; text-align: center; }
-        .btn:hover { background: #004a94; color: white; }
-        
-        .features { list-style: none; padding: 0; }
-        .features li { margin-bottom: 0.5rem; }
-        .features li::before { content: "✓ "; color: #005EB8; font-weight: bold; }
-        
-        .form-container { width: 100%; height: 600px; margin-top: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; background-color: #fafafa; }
-        .form-container iframe { width: 100%; height: 100%; border: none; }
-
-        .footer { text-align: center; padding: 2rem 1rem 3rem; color: #666; font-size: 0.95rem; }
-        .footer a { color: #005EB8; text-decoration: none; font-weight: 600; margin: 0 10px; display: inline-flex; align-items: center; gap: 5px; }
-        .footer a:hover { text-decoration: underline; color: #004a94; }
-        .footer svg { width: 18px; height: 18px; fill: currentColor; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #005EB8 0%, #00478d 100%);
+      }
+      .ghost-border {
+        outline: 1px solid rgba(194, 198, 212, 0.2);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9ff;
+        color: #0b1c30;
+      }
+      /* Ocultar scrollbar en el iframe pero permitir scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <div class="header">
-        <img src="Canarias_MedCalc.png" alt="Logo CanariasMedCalc">
-        <h1>CanariasMedCalc</h1>
-        <p>Ecosistema de calculadoras y herramientas clínicas para profesionales sanitarios</p>
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/20">
+    <div class="flex justify-between items-center px-4 md:px-6 py-3 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-white overflow-hidden border border-outline-variant/20 flex-shrink-0">
+                <img alt="Canarias MedCalc Logo" class="w-full h-full object-cover" src="Canarias_MedCalc.png"/>
+            </div>
+            <div class="text-lg md:text-xl font-bold tracking-tight text-slate-900 truncate">
+                Canarias <span class="text-primary">MedCalc</span>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-primary font-semibold border-b-2 border-primary pb-1 text-sm tracking-tight" href="index.html">Inicio</a>
+            <a class="text-slate-600 hover:text-primary transition-colors text-sm font-medium tracking-tight" href="index.html#herramientas">Herramientas</a>
+            <a class="text-slate-600 hover:text-primary transition-colors text-sm font-medium tracking-tight" href="index.html#contacto">Contacto</a>
+            <a class="text-slate-600 hover:text-primary transition-colors text-sm font-medium tracking-tight" href="privacidad.html">Privacidad</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="#contacto" class="hidden sm:flex primary-gradient text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">
+                Beta Tester
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-primary focus:outline-none">
+                <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+            </button>
+        </div>
     </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0">
+        <div class="flex flex-col px-4 py-4 space-y-4">
+            <a href="#" class="mobile-link text-primary font-semibold text-base">Inicio</a>
+            <a href="#herramientas" class="mobile-link text-slate-600 hover:text-primary font-medium text-base">Herramientas</a>
+            <a href="#contacto" class="mobile-link text-slate-600 hover:text-primary font-medium text-base">Contacto</a>
+            <a href="privacidad.html" class="mobile-link text-slate-600 hover:text-primary font-medium text-base">Privacidad</a>
+            <a href="#contacto" class="mobile-link primary-gradient text-white text-center px-5 py-3 rounded-lg text-sm font-semibold w-full mt-2">
+                Beta Tester (Android)
+            </a>
+        </div>
+    </div>
+</nav>
 
-    <div class="container">
-        <div class="card">
-            <h2>AmpaCalc - Control Profesional de la HTA</h2>
-            <p>Nuestra primera herramienta, diseñada para analizar y evaluar los registros de Monitorización Ambulatoria de la Presión Arterial (AMPA) de forma rápida, precisa y basada en el protocolo clínico.</p>
-            
-            <ul class="features">
-                <li>Compatible con diagnóstico (7 días) y seguimiento (1 día).</li>
-                <li>Perfiles de riesgo ajustables (General, EVA, RCV Alto).</li>
-                <li>Generación instantánea de promedios e informes.</li>
-            </ul>
-
-            <h3 style="margin-top: 2rem;">🌐 Versión Web Universal (iOS, Mac, PC)</h3>
-            <p>Utiliza AmpaCalc directamente desde el navegador de tu dispositivo.</p>
-            <a href="/ampacalc/" class="btn" target="_parent">Abrir AmpaCalc Web</a>
-            <button onclick="document.getElementById('installModal').style.display='block'" class="btn btn-outline" style="margin-left: 0; margin-top: 10px; cursor: pointer;">📲 ¿Quieres instalar AmpaCalc Web en tu móvil o PC?</button>
-
-            <div id="installModal" class="modal">
-                <div class="modal-content" style="margin-top: 0%;">
-                    <span class="close" onclick="document.getElementById('installModal').style.display='none'">&times;</span>
-                    <h3 style="margin-top: 0; color: #005EB8;">Instalar AmpaCalc</h3>
-                    <p>AmpaCalc Web es una Aplicación Web Progresiva (PWA). Puedes instalarla en tu dispositivo para usarla como una app nativa sin ocupar apenas espacio:</p>
-                    
-                    <div class="install-guide">
-                        <h4>🍎 En iPhone / iPad (Safari)</h4>
-                        <ol>
-                            <li>Abre AmpaCalc Web en el navegador <strong>Safari</strong>.</li>
-                            <li>Toca el botón <strong>Compartir</strong> (el cuadrado con la flecha hacia arriba, abajo en el centro).</li>
-                            <li>Selecciona <strong>"Añadir a la pantalla de inicio"</strong>.</li>
-                        </ol>
-
-                        <h4>🤖 En Android (Chrome)</h4>
-                        <ol>
-                            <li>Abre AmpaCalc Web en <strong>Google Chrome</strong>.</li>
-                            <li>Toca los <strong>3 puntitos</strong> arriba a la derecha.</li>
-                            <li>Selecciona <strong>"Instalar aplicación"</strong> o "Añadir a la pantalla de inicio".</li>
-                        </ol>
-                        
-                        <h4>💻 En PC / Mac (Chrome / Edge)</h4>
-                        <p>Haz clic en el icono de <strong>"Instalar"</strong> (un símbolo de pantalla con una flecha o unas cajitas apiladas con un +) que aparece a la derecha de la barra de direcciones superior.</p>
+<main class="pt-20 md:pt-24">
+    <section class="relative px-4 md:px-6 py-12 md:py-24 max-w-7xl mx-auto overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="md:w-3/5 space-y-6 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-on-surface tracking-tight leading-[1.1]">
+                    Herramientas de cálculo gratuitas para el <span class="text-primary">profesional sanitario</span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mx-auto md:mx-0">
+                    Ahorra tiempo en tu consulta. <span class="font-bold text-primary">Diseñadas por y para profesionales sanitarios.</span> Totalmente gratuito y basado en evidencia científica actualizada.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="#herramientas" class="w-full sm:w-auto text-center primary-gradient text-white px-8 py-4 rounded-lg font-bold text-base shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all active:scale-95">
+                        Explorar Calculadoras
+                    </a>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 sm:gap-6 pt-4 text-sm font-medium text-on-surface-variant/70">
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-primary text-xl" data-icon="card_membership">card_membership</span>
+                        100% Gratuito
                     </div>
                 </div>
             </div>
-            
-            <script>
-            
-                window.onclick = function(event) {
-                    var modal = document.getElementById('installModal');
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            </script>
+            <div class="hidden md:block md:w-2/5 relative">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="relative bg-surface-container-lowest p-8 rounded-xl shadow-2xl shadow-blue-900/5 border border-outline-variant/10">
+                    <div class="space-y-4">
+                       <img alt="AmpaCalc Interface" class="w-full h-full object-cover" src="Canarias_MedCalc.png"/>
+                        </div>
+                        <div class="h-10 w-full primary-gradient rounded opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h3 style="margin-top: 2.5rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" style="width: 28px; height: 28px; fill: #3DDC84;">
-                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592c.1052-.1819.043-.4146-.1391-.5195-.1824-.1052-.4146-.0425-.5196.1396l-2.0355 3.5256c-1.4552-.663-3.1118-1.0343-4.8856-1.0343-1.7742 0-3.431.3713-4.8864 1.0343L5.378 5.4822c-.1051-.1821-.3376-.2448-.5196-.1396-.1824.1049-.2444.3376-.1392.5195l1.9971 3.4592C3.1207 11.2828 1 14.5165 1 18.246h22c0-3.7295-2.1208-6.9632-5.7185-8.9246"/>
-                </svg>
-                ¿Tienes Android? Únete al Programa Beta Tester (Android)
-            </h3>
-            <p>Estamos ultimando los detalles de nuestra app nativa para Android. <b>Si eres profesional sanitario y quieres probarla antes de su lanzamiento oficial,</b> rellena el siguiente formulario para solicitar acceso.</p>
-            <p>Igualmente si tienes alguna duda, sugerencia o quieres reportar un problema; escríbenos:</p>
-            
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefphF4WeP2cx3SL1bc8OEWql1SlBoohLHCmQDzb0aOLK68nA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario…</iframe>
+    <section id="herramientas" class="bg-surface-container-low py-16 md:py-20 border-t border-outline-variant/20">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div class="text-center md:text-left">
+                    <span class="text-primary font-bold tracking-widest text-xs uppercase block mb-2">Portfolio Clínico</span>
+                    <h2 class="text-3xl font-bold text-on-surface">Nuestras Herramientas</h2>
+                </div>
+                <div class="flex justify-center gap-2">
+                    <span class="rounded-full px-4 py-1.5 bg-blue-100 text-blue-800 text-xs font-bold">Activas</span>
+                    <span class="rounded-full px-4 py-1.5 bg-slate-200 text-slate-600 text-xs font-bold">Próximamente</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="md:col-span-2 group relative bg-surface-container-lowest rounded-xl overflow-hidden ghost-border p-6 sm:p-8 md:p-12 transition-all hover:shadow-xl hover:shadow-primary/5 flex flex-col md:flex-row gap-6 md:gap-8 items-center border border-outline-variant/20">
+                    <div class="flex-1 space-y-6 text-center md:text-left w-full">
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/30 flex-shrink-0">
+                                    <img alt="AmpaCalc Icon" class="w-full h-full object-cover" src="./ampacalc/assets/assets/logo/logo.png"/>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-on-surface">AmpaCalc</h3>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="bg-primary/10 text-primary text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider">PWA</span>
+                                <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider">Validado</span>
+                            </div>
+                        </div>
+                        <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+                            Control profesional de la Hipertensión Arterial adaptado a protocolos clínicos europeos y EVA del SCS. Una herramienta integral para el seguimiento ambulatorio de la  <span class="font-bold text-primary">automedición de la presión arterial (AMPA)</span> con generación de promedios, plantillas para pacientes e informes técnicos en formato PDF.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <a href="/ampacalc/" target="_parent" class="w-full sm:w-auto justify-center primary-gradient text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm">
+                                Abrir AmpaCalc Web
+                                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            </a>
+                            <button onclick="document.getElementById('installModal').style.display='flex'" class="w-full sm:w-auto justify-center bg-slate-100 hover:bg-slate-200 text-primary border border-slate-300 px-4 py-3 rounded-lg font-bold flex items-center gap-2 transition-all text-sm">
+                                <span class="material-symbols-outlined text-lg" data-icon="install_mobile">install_mobile</span>
+                                Instalar App
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/5 aspect-video md:aspect-square rounded-lg overflow-hidden relative shadow-lg border border-outline-variant/20">
+                        <img alt="AmpaCalc Interface" class="w-full h-full object-cover" src="banner.png"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 border border-outline-variant/20 transition-all hover:border-primary/30 flex flex-col justify-between opacity-80">
+                    <div class="space-y-4 text-center md:text-left">
+                        <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
+                            <div class="w-12 h-12 md:w-10 md:h-10 rounded bg-primary/5 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined" data-icon="ecg_heart">ecg_heart</span>
+                            </div>
+                            <span class="text-[10px] font-bold py-1 px-2 rounded-full bg-error-container text-on-error-container uppercase whitespace-nowrap">En desarrollo</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface">Riesgo Cardiovascular</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Evaluación del riesgo según tablas SCORE y factores metabólicos para prevención primaria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-16 md:py-20 px-4 md:px-6 max-w-7xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl border border-outline-variant/20 overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 bg-slate-50 p-6 sm:p-8 md:p-12 border-b md:border-b-0 md:border-r border-outline-variant/20">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3 mb-6">
+                    <svg viewBox="0 0 24 24" class="w-10 h-10 sm:w-8 sm:h-8 fill-green-500 flex-shrink-0">
+                        <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592c.1052-.1819.043-.4146-.1391-.5195-.1824-.1052-.4146-.0425-.5196.1396l-2.0355 3.5256c-1.4552-.663-3.1118-1.0343-4.8856-1.0343-1.7742 0-3.431.3713-4.8864 1.0343L5.378 5.4822c-.1051-.1821-.3376-.2448-.5196-.1396-.1824.1049-.2444.3376-.1392.5195l1.9971 3.4592C3.1207 11.2828 1 14.5165 1 18.246h22c0-3.7295-2.1208-6.9632-5.7185-8.9246"/>
+                    </svg>
+                    <h3 class="text-xl sm:text-2xl font-bold text-on-surface mt-2 sm:mt-0">Beta Tester (Android)</h3>
+                </div>
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed text-center sm:text-left">
+                    Estamos ultimando los detalles de nuestra app nativa. <b>Si eres profesional sanitario y quieres probarla antes de su lanzamiento,</b> rellena el formulario adjunto para solicitar acceso.
+                </p>
+                <div class="h-px w-full bg-slate-200 my-6"></div>
+                <h4 class="font-bold text-on-surface mb-2 text-center sm:text-left">Contacto General</h4>
+                <p class="text-sm text-slate-600 leading-relaxed text-center sm:text-left">
+                    Igualmente, si tienes alguna duda, sugerencia o quieres reportar un problema, utiliza este mismo formulario para escribirnos.
+                </p>
+            </div>
+            <div class="md:w-2/3 h-[500px] md:h-[600px] w-full bg-white relative">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefphF4WeP2cx3SL1bc8OEWql1SlBoohLHCmQDzb0aOLK68nA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" class="absolute inset-0 no-scrollbar">Cargando formulario…</iframe>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="w-full border-t border-slate-200 bg-white mt-8 md:mt-12">
+    <div class="flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 py-8 gap-6 max-w-7xl mx-auto">
+        <div class="text-xs font-normal leading-relaxed text-slate-500 text-center md:text-left">
+            © 2026 Canarias MedCalc - Oliver Cabello.<br>Diseñado por y para profesionales sanitarios. Uso gratuito y sin registros.
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <a class="text-slate-500 hover:text-primary transition-colors text-xs font-medium flex items-center gap-1" href="https://github.com/olivercabello">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a class="text-slate-500 hover:text-primary transition-colors text-xs font-medium flex items-center gap-1" href="https://linkedin.com/in/oliver-cabello-836913341">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a class="text-slate-500 hover:text-primary transition-colors text-xs font-medium" href="privacidad.html">Aviso Legal / Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+<div id="installModal" class="fixed inset-0 z-[100] hidden bg-slate-900/50 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative border border-outline-variant/20">
+        <button onclick="document.getElementById('installModal').style.display='none'" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 transition-colors">
+            <span class="material-symbols-outlined text-3xl" data-icon="close">close</span>
+        </button>
+        
+        <h3 class="text-xl sm:text-2xl font-bold text-primary mb-3 pr-8">Instalar AmpaCalc</h3>
+        <p class="text-sm text-slate-600 mb-6 leading-relaxed border-b border-slate-100 pb-4">
+            AmpaCalc Web es una Aplicación Web Progresiva (PWA). Puedes instalarla en tu dispositivo para usarla como una app nativa, funcionar sin conexión y sin ocupar apenas espacio de almacenamiento.
+        </p>
+        
+        <div class="space-y-4 sm:space-y-6 text-sm text-slate-700">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                    <span class="text-xl">🍎</span> En iPhone / iPad (Safari)
+                </h4>
+                <ol class="list-decimal pl-5 space-y-1.5 text-slate-600">
+                    <li>Abre AmpaCalc Web en el navegador <strong>Safari</strong>.</li>
+                    <li>Toca el botón <strong>Compartir</strong> (el cuadrado con la flecha).</li>
+                    <li>Selecciona <strong>"Añadir a la pantalla de inicio"</strong>.</li>
+                </ol>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                    <span class="text-xl">🤖</span> En Android (Chrome)
+                </h4>
+                <ol class="list-decimal pl-5 space-y-1.5 text-slate-600">
+                    <li>Abre AmpaCalc Web en <strong>Google Chrome</strong>.</li>
+                    <li>Toca los <strong>3 puntitos</strong> (arriba a la derecha).</li>
+                    <li>Selecciona <strong>"Instalar aplicación"</strong> o "Añadir a inicio".</li>
+                </ol>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                    <span class="text-xl">💻</span> En PC / Mac (Chrome / Edge)
+                </h4>
+                <p class="text-slate-600 leading-relaxed">Haz clic en el icono de <strong>"Instalar"</strong> (un símbolo de pantalla con una flecha o un símbolo "+") que aparece a la derecha de la barra de direcciones superior de tu navegador.</p>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>Desarrollado por <strong>Oliver Cabello</strong></p>
-        <div style="margin-bottom: 1rem;">
-            <a href="https://github.com/olivercabello" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                GitHub
-            </a>
-            <a href="https://linkedin.com/in/oliver-cabello-836913341" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                LinkedIn
-            </a>
-        </div>
-        <div>
-            <a href="privacidad.html" style="font-size: 0.85rem; color: #666; font-weight: normal; text-decoration: underline; display: inline-block; padding-top: 10px;">Política de Privacidad</a>
-        </div>
-    </div>
+</div>
+
+<script>
+    // Lógica Modal
+    window.onclick = function(event) {
+        var modal = document.getElementById('installModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Lógica Menú Hamburguesa
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
+
 </body>
 </html>
